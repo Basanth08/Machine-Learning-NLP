@@ -36,8 +36,6 @@ if __name__ == "__main__":
         print("Mean Sepal Length =", np.mean(X_train_norm[:, 0]))
         print("Max Sepal Length =", np.max(X_train_norm[:, 0]))
 
-
-
     # Preprocess (train)
     # normalizer = my_preprocess.my_normalizer(norm = "L2", axis = 1)
     # X_norm = normalizer.fit_transform(X)
@@ -56,10 +54,8 @@ if __name__ == "__main__":
     # Load testing data
     # data_test = pd.read_csv("/Users/varagantibasanthkumar/Desktop/DSCI-633/assignments/data/Iris_train.csv")
     # X_test = data_test[independent]
-    
     # Preprocess (test)
     # X_test_norm = normalizer.transform(X_test)
-
     # Predict
     # predictions = clf.predict(X_test_norm)
         predictions = clf.predict(X_sample)
