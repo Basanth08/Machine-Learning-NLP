@@ -52,13 +52,13 @@ if __name__ == "__main__":
         clf.fit(X_sample, y_sample)
     
     # Load testing data
-    # data_test = pd.read_csv("/Users/varagantibasanthkumar/Desktop/DSCI-633/assignments/data/Iris_train.csv")
-    # X_test = data_test[independent]
+        data_test = pd.read_csv("/Users/varagantibasanthkumar/Desktop/DSCI-633/assignments/data/Iris_train.csv")
+        X_test = data_test[independent]
     # Preprocess (test)
-    # X_test_norm = normalizer.transform(X_test)
+        X_test_norm = normalizer.transform(X_test)
     # Predict
     # predictions = clf.predict(X_test_norm)
-        predictions = clf.predict(X_sample)
+        predictions = clf.predict(X_test_norm)
     
     # Output predictions on test data
         print("\nModel predictions:")
