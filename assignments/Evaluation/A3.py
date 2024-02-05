@@ -5,7 +5,7 @@ from sklearn.tree import DecisionTreeClassifier
 
 if __name__ == "__main__":
     # Load training data
-    data_train = pd.read_csv("../data/Iris_train.csv")
+    data_train = pd.read_csv("/Users/varagantibasanthkumar/Desktop/DSCI-633/assignments/data/Iris_train.csv")
     
     # Separate independent variables and dependent variables
     independent = ["SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"]
