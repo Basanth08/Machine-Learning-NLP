@@ -52,7 +52,7 @@ if __name__ == "__main__":
         clf.fit(X_sample, y_sample)
     
     # Load testing data
-        data_test = pd.read_csv("/Users/varagantibasanthkumar/Desktop/DSCI-633/assignments/data/Iris_train.csv")
+        data_test = pd.read_csv("/Users/varagantibasanthkumar/Desktop/DSCI-633/assignments/data/Iris_test.csv")
         X_test = data_test[independent]
     # Preprocess (test)
         X_test_norm = normalizer.transform(X_test)
