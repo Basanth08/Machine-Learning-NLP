@@ -42,7 +42,9 @@ def calculate_silhouette(data):
     for cluster in clusters:
         cohesion = calculate_cohesion(data, cluster)
         separation = calculate_separation(data, clusters, cluster)
-        for ai, bi in zip(cohesion, separation):
+        for i in range(len(cohesion)):
+            ai = cohesion[i]
+            bi = separation[i]
             if max(ai, bi) > 0:
                 si = abs(1 - (ai / bi))
             else:
