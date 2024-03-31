@@ -6,15 +6,15 @@ from geneticalgorithm import geneticalgorithm as ga
 from my_evaluation import my_evaluation
 
 def f(X):
-    # Load the Breast Cancer dataset
+    # Open the dataset for breast cancer.
     df = pd.read_csv('/Users/varagantibasanthkumar/Desktop/DSCI-633/assignments/data/breast_cancer.csv')
     X_data = df.drop('Class', axis=1)
     y_data = df['Class']
 
-    # Perform one-hot encoding on categorical features
+    # Use one-hot encoding for characteristics that fall into categories.
     X_data = pd.get_dummies(X_data)
 
-    # Split the data into training and testing sets
+    # Divide the data into sets for testing and training.
     X_train, X_test, y_train, y_test = train_test_split(X_data, y_data, test_size=0.2, random_state=42)
 
     # Create a DecisionTreeClassifier with the given hyperparameters
@@ -32,10 +32,10 @@ def f(X):
     eval_obj = my_evaluation(y_pred, y_test)
     macro_f1 = eval_obj.f1(average='macro')
 
-    # Negate the macro F1 score for maximization
+    # To maximise, negate the macro F1 score.
     return -macro_f1
 
-# Define the search space for the hyperparameters
+# Define the hyperparameters' search space.
 varbound = np.array([[0, 1], [1, 12]])
 
 # Create and run the Genetic Algorithm
