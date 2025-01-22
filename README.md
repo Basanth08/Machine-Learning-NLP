@@ -72,19 +72,6 @@ class DecisionTree:
         pass
 ```
 
-## 🛠️ Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/[your-username]/ML-Framework.git
-
-# Navigate to project directory
-cd ML-Framework
-
-# Install dependencies
-pip install -r requirements.txt
-```
-
 ## 📊 Usage Examples
 
 ```python
